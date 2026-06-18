@@ -339,6 +339,23 @@ section { padding: 140px 0; }
 
 .team-bio { color: var(--ink-dim); font-size: 15px; }
 
+.team-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.team-contact a {
+  color: var(--ink-dim);
+  transition: color 0.25s ease;
+}
+
+.team-contact a:hover { color: var(--gold); }
+
 /* ---------- Practice areas ---------- */
 .areas-grid {
   display: grid;
@@ -416,7 +433,8 @@ section { padding: 140px 0; }
   margin: 36px 0 10px;
 }
 .contact-info h3:first-child { margin-top: 0; }
-.contact-info p { color: var(--ink-dim); }
+.contact-info p { color: var(--ink-dim); margin-bottom: 14px; }
+.contact-info p:last-of-type { margin-bottom: 0; }
 .contact-info a:hover { color: var(--gold); }
 
 form { display: flex; flex-direction: column; gap: 22px; }
