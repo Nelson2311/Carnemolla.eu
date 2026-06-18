@@ -64,6 +64,20 @@ header {
 
 .logo span { color: var(--gold); }
 
+.logo--brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  background: #fff;
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+
 .nav-links {
   display: flex;
   gap: 40px;
