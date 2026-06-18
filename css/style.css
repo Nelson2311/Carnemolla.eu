@@ -316,6 +316,15 @@ section { padding: 140px 0; }
   filter: grayscale(0%);
 }
 
+.team-photo img[alt="Avv. Gabriele Carnemolla"] {
+  object-fit: contain;
+  background: linear-gradient(160deg, #1c1d21, #0e0f11);
+}
+
+.team-card:hover .team-photo img[alt="Avv. Gabriele Carnemolla"] {
+  transform: none;
+}
+
 .team-photo .placeholder-mark {
   font-family: var(--serif);
   font-size: 80px;
