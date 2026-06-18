@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contatti — Studio Legale Carnemolla</title>
+<meta name="description" content="Contatta lo Studio Legale Carnemolla per una consulenza." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo">Carnemolla<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="avvocati.html">Avvocati</a>
+      <a href="aree-di-pratica.html">Aree di Pratica</a>
+      <a href="contatti.html" class="active">Contatti</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <div class="eyebrow">Contatti</div>
+    <h1 class="section-title">Parliamo del vostro caso</h1>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <h3>Studio</h3>
+      <p>Via Esempio 1, 00100 Roma (RM)</p>
+
+      <h3>Telefono</h3>
+      <p><a href="tel:+390000000000">+39 000 000 0000</a></p>
+
+      <h3>Email</h3>
+      <p><a href="mailto:info@carnemolla.eu">info@carnemolla.eu</a></p>
+
+      <h3>Orari</h3>
+      <p>Lunedì – Venerdì, 9:00 – 18:00<br />Su appuntamento</p>
+    </div>
+
+    <form id="contact-form" class="reveal">
+      <div class="field">
+        <label for="name">Nome e cognome</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="field">
+        <label for="phone">Telefono</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+      <div class="field">
+        <label for="message">Messaggio</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Invia messaggio</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo">Carnemolla<span>.</span></a>
+        <p>Studio Legale Carnemolla — Consulenza e assistenza legale.</p>
+      </div>
+      <div class="footer-links">
+        <a href="avvocati.html">Avvocati</a>
+        <a href="aree-di-pratica.html">Aree di Pratica</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Studio Legale Carnemolla. Tutti i diritti riservati.</span>
+      <span>P.IVA 00000000000</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
