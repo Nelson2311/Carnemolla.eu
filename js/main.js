@@ -32,6 +32,24 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Google Analytics, caricato solo previo consenso (cookie analitici, vedi Cookie Policy)
+const GA_MEASUREMENT_ID = "G-P4VKHGDKT5";
+function loadAnalytics() {
+  if (window.gtagLoaded) return;
+  window.gtagLoaded = true;
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  window.gtag = gtag;
+  gtag("js", new Date());
+  gtag("config", GA_MEASUREMENT_ID);
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  document.head.appendChild(script);
+}
+
 // Cookie consent banner
 (function () {
   const CONSENT_KEY = "cc_consent";
@@ -92,7 +110,12 @@ window.addEventListener("scroll", () => {
   const banner = buildBanner();
   if (existingConsent) {
     banner.setAttribute("hidden", "");
+    if (existingConsent.choice === "accepted") loadAnalytics();
   }
+
+  document.addEventListener("cc_consent_change", (e) => {
+    if (e.detail === "accepted") loadAnalytics();
+  });
 
   const manageBtn = document.querySelector("#manage-cookies");
   if (manageBtn) {
