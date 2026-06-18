@@ -60,6 +60,7 @@ header {
   font-size: 24px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .logo span { color: var(--gold); }
@@ -549,6 +550,8 @@ footer {
 @media (max-width: 560px) {
   .nav { padding: 18px 20px; }
   .container { padding: 0 20px; }
+  .logo--brand { font-size: 17px; }
+  .logo-img { height: 28px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .cta-actions { flex-direction: column; width: 100%; }
