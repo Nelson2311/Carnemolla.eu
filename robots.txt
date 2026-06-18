@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /cookie-policy.html
+Disallow: /note-legali.html
+
+# Crawler AI espliciti (ricerca/assistenti)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.carnemolla.eu/sitemap.xml
