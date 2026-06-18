@@ -41,11 +41,17 @@
 }
 .legal-list li { margin-bottom: 8px; }
 
+.legal-table-wrap {
+  max-width: 900px;
+  overflow-x: auto;
+  margin: 20px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
 .legal-table {
   width: 100%;
-  max-width: 900px;
+  min-width: 560px;
   border-collapse: collapse;
-  margin: 20px 0;
   font-size: 14px;
 }
 .legal-table th, .legal-table td {
