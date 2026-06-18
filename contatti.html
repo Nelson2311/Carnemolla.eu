@@ -59,7 +59,9 @@
       <p>Lunedì – Venerdì, 9:00 – 18:00<br />Su appuntamento</p>
     </div>
 
-    <form id="contact-form" class="reveal">
+    <form id="contact-form" class="reveal" action="https://formsubmit.co/ajax/avv.fabiocarnemolla@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuovo contatto dal sito carnemolla.eu" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
       <div class="field">
         <label for="name">Nome e cognome</label>
         <input type="text" id="name" name="name" required />
@@ -83,6 +85,7 @@
         </label>
       </div>
       <button type="submit" class="btn btn-primary">Invia messaggio</button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>

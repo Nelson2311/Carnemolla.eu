@@ -498,6 +498,12 @@ form { display: flex; flex-direction: column; gap: 22px; }
 
 .checkbox-label a { color: var(--gold); }
 
+.form-status {
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  margin-top: 4px;
+}
+
 /* ---------- Footer ---------- */
 footer {
   border-top: 1px solid var(--line);

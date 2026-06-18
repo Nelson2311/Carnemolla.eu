@@ -102,14 +102,34 @@ window.addEventListener("scroll", () => {
   }
 })();
 
-// Contact form (placeholder submit handler)
+// Contact form submission via FormSubmit
 const form = document.querySelector("#contact-form");
 if (form) {
-  form.addEventListener("submit", (e) => {
+  const status = form.querySelector("#form-status");
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const button = form.querySelector("button[type=submit]");
-    button.textContent = "Messaggio inviato";
-    form.reset();
-    setTimeout(() => (button.textContent = "Invia messaggio"), 3000);
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = "Invio in corso...";
+    if (status) status.textContent = "";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error("Invio non riuscito");
+      button.textContent = "Messaggio inviato";
+      if (status) status.textContent = "Grazie, il messaggio è stato inviato. Vi risponderemo al più presto.";
+      form.reset();
+    } catch (err) {
+      button.textContent = originalText;
+      if (status) status.textContent = "Si è verificato un errore nell'invio. Riprova oppure scrivici direttamente via email.";
+    } finally {
+      button.disabled = false;
+      setTimeout(() => (button.textContent = originalText), 3000);
+    }
   });
 }
